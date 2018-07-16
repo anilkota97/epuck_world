@@ -1,0 +1,8 @@
+prefix=/home/anil/world/install
+
+Name: world_description
+Description: Description of world_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anil/world/install/lib 
+Requires: 

@@ -1,0 +1,2 @@
+world_description:world_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/anil/world/devel -DCMAKE_INSTALL_PREFIX=/home/anil/world/install -G Unix Makefiles

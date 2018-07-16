@@ -1,0 +1,8 @@
+prefix=/home/anil/world/install
+
+Name: world_gazebo
+Description: Description of world_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anil/world/install/lib 
+Requires: 

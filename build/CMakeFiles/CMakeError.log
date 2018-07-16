@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/anil/world/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec88504114/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec88504114.dir/build.make CMakeFiles/cmTryCompileExec88504114.dir/build
+make[1]: Entering directory `/home/anil/world/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/anil/world/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec88504114.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec88504114.dir/CheckSymbolExists.c.o   -c /home/anil/world/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec88504114
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec88504114.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec88504114.dir/CheckSymbolExists.c.o  -o cmTryCompileExec88504114 -rdynamic 
+CMakeFiles/cmTryCompileExec88504114.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec88504114] Error 1
+make[1]: Leaving directory `/home/anil/world/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec88504114/fast] Error 2
+
+File /home/anil/world/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/anil/world/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3260189189/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3260189189.dir/build.make CMakeFiles/cmTryCompileExec3260189189.dir/build
+make[1]: Entering directory `/home/anil/world/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/anil/world/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3260189189.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3260189189.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3260189189
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3260189189.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3260189189.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3260189189 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec3260189189] Error 1
+make[1]: Leaving directory `/home/anil/world/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3260189189/fast] Error 2
+
+
